@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Pinglucy">
+    <meta name="keywords" content="java, Pinglucy">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Pinglucy</title>
+    <title>java | Pinglucy</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">java</h1>
                 </div>
             </div>
         </div>
@@ -429,9 +429,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -443,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-04-17
+                    2023-04-18
                 </div>
                 
 
@@ -464,19 +468,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="Java-基础语法"><a href="#Java-基础语法" class="headerlink" title="Java 基础语法"></a>Java 基础语法</h2><h4 id="1、java-向下取整，向上取整，四舍五入取整"><a href="#1、java-向下取整，向上取整，四舍五入取整" class="headerlink" title="1、java 向下取整，向上取整，四舍五入取整"></a>1、java 向下取整，向上取整，四舍五入取整</h4><p>​ 1）四舍五入 Math.round()</p>
+<p>​ <strong>可以使用 Math.round 函数进行小数位数的控制输出</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//主要用到Math类的round函数</span></span><br><span class="line"><span class="type">double</span> <span class="variable">d</span> <span class="operator">=</span><span class="number">500</span>/<span class="number">3.0</span>;</span><br><span class="line">d = (<span class="type">double</span>)Math.round(d*<span class="number">1000</span>)/<span class="number">1000</span>;<span class="comment">//保留三位小数</span></span><br><span class="line">System.out.println(d);</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>​ 2）向上取整 Math.ceil()</p>
+<p>​ 3）向下取整 Math.floor()</p>
+<h4 id="2、控制输出小数精度"><a href="#2、控制输出小数精度" class="headerlink" title="2、控制输出小数精度"></a>2、控制输出小数精度</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">System.out.printf(<span class="string">&quot;%.1f &quot;</span>,(<span class="type">double</span>)sum/(n/k));<span class="comment">//f后面是一个空格</span></span><br><span class="line"><span class="comment">//可以通过printf直接控制小数位数</span></span><br><span class="line">System.out.printf(<span class="string">&quot;%.6f\n&quot;</span>,(<span class="type">double</span>)sum/(n-(n/k)));<span class="comment">//f后面是一个换行符</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h4 id="3、控制有效位数的输出"><a href="#3、控制有效位数的输出" class="headerlink" title="3、控制有效位数的输出"></a>3、控制有效位数的输出</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BigDecimal</span> <span class="variable">b</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(String.valueOf(参数));</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">divisor</span> <span class="operator">=</span> BigDecimal.ONE;</span><br><span class="line"><span class="type">MathContext</span> <span class="variable">mc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MathContext</span>(<span class="number">6</span>);<span class="comment">//保留6位有效位数</span></span><br><span class="line">System.out.println(b.divide(divisor,mc));</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h4 id="4、数字与字符之间的转换"><a href="#4、数字与字符之间的转换" class="headerlink" title="4、数字与字符之间的转换"></a>4、数字与字符之间的转换</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * charAt（i）方法是指去字符串中指定位置的字符，i从0开始</span></span><br><span class="line"><span class="comment"> * 这里要注意的是：由于字符char存储到内存中是存储字符的ASCII码，</span></span><br><span class="line"><span class="comment"> * 例如字符‘0’的ASCII码是48，</span></span><br><span class="line"><span class="comment"> * ASCII与数字字符本身代表的值的转换关系是：数字字符-‘0’的ASCII=数字字符本身代表的值</span></span><br><span class="line"><span class="comment"> * input  0-670-82162-4</span></span><br><span class="line"><span class="comment"> * 比如：如下 s.charAt(2)-&#x27;0&#x27;为 &#x27;7&#x27;-&#x27;0&#x27;=7(结果7类型为数值)</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h4 id="5、将数字转换为字符串"><a href="#5、将数字转换为字符串" class="headerlink" title="5、将数字转换为字符串"></a>5、将数字转换为字符串</h4><p>String.valueOf(int i) 将 int 变量 i <strong>转换成字符串</strong></p>
+<h4 id="6、由-String-转换成-数字的基本数据型态"><a href="#6、由-String-转换成-数字的基本数据型态" class="headerlink" title="6、由 String 转换成 数字的基本数据型态"></a>6、由 String 转换成 数字的基本数据型态</h4><p><strong>byte :</strong><br>Byte.parseByte(String s) : 将 s 转换成 byte<br><strong>double :</strong><br>Double.parseDouble(String s) : 将 s 转换成 double<br><strong>float :</strong><br>Double.parseFloat(String s) : 将 s 转换成 float<br><strong>int :</strong><br>Integer.parseInt(String s) : 将 s 转换成 int<br><strong>long :</strong><br>Long.parseLong(String s)</p>
+<h4 id="7、next-与-nextLine-混用"><a href="#7、next-与-nextLine-混用" class="headerlink" title="7、next()与 nextLine()混用"></a>7、next()与 nextLine()混用</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">		System.out.println(<span class="string">&quot;请输入你的年龄： &quot;</span>);</span><br><span class="line">		<span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> sc.nextInt();<span class="comment">//空格或回车作为结束</span></span><br><span class="line">		System.out.println(<span class="string">&quot;年龄： &quot;</span>+age);</span><br><span class="line">		System.out.println(<span class="string">&quot;请输入的爱好: &quot;</span>);</span><br><span class="line">		<span class="type">String</span> <span class="variable">like</span> <span class="operator">=</span> sc.nextLine();</span><br><span class="line">		System.out.println(<span class="string">&quot;爱好: &quot;</span>+like);</span><br></pre></td></tr></table></figure>
+
+<p>此时 nextLine()读取的是 nextInt()的回车换行符，导致无法输入爱好的内容。<br>解决办法:添加 sc.nextLine();如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">		System.out.println(<span class="string">&quot;请输入你的年龄： &quot;</span>);</span><br><span class="line">		<span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> sc.nextInt();<span class="comment">//空格或回车作为结束</span></span><br><span class="line">		System.out.println(<span class="string">&quot;年龄： &quot;</span>+age);</span><br><span class="line">		sc.nextLine();<span class="comment">//important</span></span><br><span class="line">		System.out.println(<span class="string">&quot;请输入的爱好: &quot;</span>);</span><br><span class="line">		<span class="type">String</span> <span class="variable">like</span> <span class="operator">=</span> sc.nextLine();</span><br><span class="line">		System.out.println(<span class="string">&quot;爱好: &quot;</span>+like);</span><br></pre></td></tr></table></figure>
 
                 
             </div>
@@ -503,7 +512,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Pinglucy.github.io/2023/04/17/hello-world/">http://Pinglucy.github.io/2023/04/17/hello-world/</a>
+                    <a href="http://Pinglucy.github.io/2023/04/18/sqlserver/">http://Pinglucy.github.io/2023/04/18/sqlserver/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -540,7 +549,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -708,9 +721,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/04/18/sqlserver/">
                     <div class="card-image">
@@ -728,9 +742,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -739,6 +753,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -754,7 +769,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2023/04/17/hello-world/">
@@ -784,7 +799,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
